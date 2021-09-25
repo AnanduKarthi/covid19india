@@ -7,7 +7,7 @@ const dbPath = path.join(__dirname, "covid19India.db");
 const app = express();
 
 let dataBase = null;
-
+app.use(express.json())
 const initializingServerAndDb = async () => {
   try {
     dataBase = await open({
